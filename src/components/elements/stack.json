@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_elements_stacks",
+  "info": {
+    "displayName": "stack",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "product_a": {
+      "type": "string"
+    },
+    "product_b": {
+      "type": "string"
+    },
+    "product_c": {
+      "type": "string"
+    }
+  }
+}

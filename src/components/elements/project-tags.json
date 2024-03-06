@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_elements_project_tags",
+  "info": {
+    "displayName": "project_tags",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "label_a": {
+      "type": "string"
+    },
+    "label_b": {
+      "type": "string"
+    },
+    "label_c": {
+      "type": "string"
+    }
+  }
+}
