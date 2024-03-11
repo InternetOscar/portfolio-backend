@@ -43,6 +43,9 @@
     },
     "product_c": {
       "type": "string"
+    },
+    "github": {
+      "type": "string"
     }
   }
 }

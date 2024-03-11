@@ -953,6 +953,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     product_a: Attribute.String;
     product_b: Attribute.String;
     product_c: Attribute.String;
+    github: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
