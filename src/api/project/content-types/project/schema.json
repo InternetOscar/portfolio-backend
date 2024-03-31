@@ -46,6 +46,11 @@
     },
     "github": {
       "type": "string"
+    },
+    "Block": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.rich-text"
     }
   }
 }

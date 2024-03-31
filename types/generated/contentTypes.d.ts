@@ -954,6 +954,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     product_b: Attribute.String;
     product_c: Attribute.String;
     github: Attribute.String;
+    Block: Attribute.Component<'shared.rich-text', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -965,6 +966,36 @@ export interface ApiProjectProject extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::project.project',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiProjectDetailProjectDetail extends Schema.CollectionType {
+  collectionName: 'project_details';
+  info: {
+    singularName: 'project-detail';
+    pluralName: 'project-details';
+    displayName: 'ProjectDetail';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    description: Attribute.Component<'shared.rich-text', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::project-detail.project-detail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::project-detail.project-detail',
       'oneToOne',
       'admin::user'
     > &
@@ -994,6 +1025,7 @@ declare module '@strapi/types' {
       'api::book.book': ApiBookBook;
       'api::global.global': ApiGlobalGlobal;
       'api::project.project': ApiProjectProject;
+      'api::project-detail.project-detail': ApiProjectDetailProjectDetail;
     }
   }
 }
